@@ -141,7 +141,7 @@ def evaluate(labels, predictions):
         # counting totals
         if predicted == 1:
             total_positive += 1
-        if predicted == 0:
+        elif predicted == 0:
             total_negative += 1
         # counting number of correct totals
         if predicted == actual and predicted == 0:
