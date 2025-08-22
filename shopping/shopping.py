@@ -138,10 +138,6 @@ def evaluate(labels, predictions):
     positive_correct = 0
     negative_correct = 0
     for actual, predicted in zip(labels, predictions):
-        # counting totals
-
-        if predicted == 0:
-            total_negative += 1
         # counting number of correct totals
         if predicted == actual and predicted == 0:
             negative_correct += 1
