@@ -141,13 +141,15 @@ def evaluate(labels, predictions):
         # counting totals
         if predicted == 1:
             total_positive += 1
+            if predicted == actual:
+            positive_correct += 1
         elif predicted == 0:
             total_negative += 1
-        # counting number of correct totals
-        if predicted == actual and predicted == 0:
+            if predicted == actual:
             negative_correct += 1
-        if predicted == actual and predicted == 1:
-            positive_correct += 1
+        # counting number of correct totals
+
+
     print(total_negative, negative_correct)
 
     sensitivity = positive_correct / total_positive
